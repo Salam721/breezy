@@ -4,7 +4,7 @@
 
 Breezy is a cross-platform mobile app that warns asthma-sensitive families when a street-level pollution plume is heading toward their block. A Python pipeline turns OpenAQ sensor readings and wind data into plume polygons; the app checks, on the phone, whether you are inside one. Your location never leaves your phone.
 
-Built for the Hacklanta Social Good track.
+
 
 ## Honest status
 | Part | State |
