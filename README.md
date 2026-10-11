@@ -13,8 +13,8 @@ Breezy is a cross-platform mobile app that warns asthma-sensitive families when 
 | App code (React Native / Expo) | Written. 55 unit tests pass, TypeScript typechecks, iOS config prebuild succeeds. **Not yet run on a phone, and the screens have not been looked at on a device.** |
 | Background tracking, alerts, headphone audio | Code written. **Unverified until the iPhone test (T2).** |
 | AWS deploy | Guide written, **commands untested.** |
-| Sensor timing | The first live check (Atlanta, Oct 10) returned readings about 58 minutes old, so these sensors report roughly hourly. Breezy does not claim real-time air quality. The app shows the age of the newest sensor reading. |
-| Plume cone length and spread | The team's own illustrative model, not a validated dispersion model. Numbers in `pipeline/breezy_pipeline/config.py` are labeled assumptions. |
+| Sensor timing | The first live check (Atlanta, Oct 10) returned readings about 58 minutes old, so these sensors report roughly hourly. The app shows the age of the newest sensor reading. |
+| Plume cone length and spread | The team's own illustrative model. Numbers in `pipeline/breezy_pipeline/config.py` are labeled  |
 | Audio warning | Placeholder tones. Replace `app/assets/audio/alert.wav` with the ElevenLabs recording. |
 
 Nothing in this project states a performance number as a result. Numbers like "under 50 ms" are targets until measured.
