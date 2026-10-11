@@ -2,6 +2,7 @@
   "expo": {
     "name": "Breezy",
     "slug": "breezy",
+    "scheme": "breezy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,20 +25,20 @@
       },
       "predictiveBackGestureEnabled": false
     },
-    "plugins": [
-      "expo-dev-client",
-      "plugins": [
+"plugins": [
   "expo-dev-client",
   "react-native-auth0",
-        "expo-location",
-        {
-          "isIosBackgroundLocationEnabled": true,
-          "locationAlwaysAndWhenInUsePermission": "Breezy checks your location in the background, on this phone only, to warn you when bad air is moving toward you. Your location is never sent to a server.",
-          "locationWhenInUsePermission": "Breezy uses your location on this phone to check the air around you. It is never sent to a server."
-        }
-      ],
-      "expo-audio",
-      "./plugins/withoutPush"
-    ]
+  [
+    "expo-location",
+    {
+      "isIosBackgroundLocationEnabled": true,
+      "locationAlwaysAndWhenInUsePermission": "Breezy checks your location in the background, on this phone only, to warn you when bad air is moving toward you.",
+      "locationWhenInUsePermission": "Breezy uses your location on this phone to check the air around you. It is never sent to a server."
+    }
+  ],
+  "expo-audio",
+  "./plugins/withoutPush"
+]
+
   }
 }

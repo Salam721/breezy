@@ -12,7 +12,10 @@
     "expo-status-bar": "~57.0.1",
     "expo-task-manager": "~57.0.21",
     "react": "19.2.3",
-    "react-native": "0.86.3"
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-auth0": "^5.11.1",
+    "react-native-web": "^0.21.2"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
