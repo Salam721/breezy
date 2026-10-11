@@ -9,3 +9,7 @@ ios/
 android/
 dist/
 *.zip
+.venv/
+test-plume.json
+test-clear.json
+pipeline/build/
