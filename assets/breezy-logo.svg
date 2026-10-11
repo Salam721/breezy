@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" font-family="Helvetica, Arial, sans-serif">
+<rect width="600" height="600" fill="#fff"/>
+<g transform="translate(90,40)">
+<path d="M210 70 V150" stroke="#0f766e" stroke-width="10" stroke-linecap="round"/>
+<path d="M205 130 C150 95 95 140 98 205 C100 245 140 255 170 235 C195 218 205 180 205 130 Z" fill="#14b8a6"/>
+<path d="M215 130 C270 95 325 140 322 205 C320 245 280 255 250 235 C225 218 215 180 215 130 Z" fill="#2563eb"/>
+<g stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85"><path d="M175 170 C165 190 160 200 150 212"/><path d="M245 170 C255 190 260 200 270 212"/></g>
+<path d="M210 70 c 22 -26 52 -26 66 -8" stroke="#99f6e4" stroke-width="7" fill="none" stroke-linecap="round"/>
+</g>
+<text x="300" y="400" text-anchor="middle" font-size="96" font-weight="800" fill="#0f766e">Breezy</text>
+<text x="300" y="455" text-anchor="middle" font-size="32" fill="#475569">Happy lungs, fresh air</text>
+</svg>

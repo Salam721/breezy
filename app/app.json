@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Breezy",
+    "slug": "breezy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "app.breezy.hacklanta",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "location",
+          "audio"
+        ]
+      }
+    },
+    "android": {
+      "package": "app.breezy.hacklanta",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "expo-dev-client",
+      [
+        "expo-location",
+        {
+          "isIosBackgroundLocationEnabled": true,
+          "locationAlwaysAndWhenInUsePermission": "Breezy checks your location in the background, on this phone only, to warn you when bad air is moving toward you. Your location is never sent to a server.",
+          "locationWhenInUsePermission": "Breezy uses your location on this phone to check the air around you. It is never sent to a server."
+        }
+      ],
+      "expo-audio",
+      "./plugins/withoutPush"
+    ]
+  }
+}
