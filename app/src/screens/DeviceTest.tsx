@@ -1,7 +1,7 @@
 /** Task T2: settle the [U] items on a real phone. Everything here is for testing, not part of the demo. */
 import React, { useCallback, useEffect, useState } from 'react';
 import { ScrollView, Text } from 'react-native';
-import { playAlertClip } from '../alerts/audio';
+import { playAlertClipDiagnostic } from '../alerts/audio';
 import { currentAudioOutputs, headphoneModuleAvailable, headphonesConnected } from '../alerts/headphones';
 import { notifyTest, requestNotificationPermission } from '../alerts/notify';
 import { PLUME_URL } from '../config';
@@ -56,7 +56,7 @@ export default function DeviceTest() {
         <Button label="Notification in 10 s (then lock the phone)" kind="secondary" onPress={run('notification', async () => {
           await requestNotificationPermission(); setTimeout(() => notifyTest('Lock-screen test'), 10_000); return 'scheduled in 10 s';
         })} />
-        <Button label="Play alert clip" kind="secondary" onPress={run('audio', async () => { await playAlertClip(); return 'playing'; })} />
+        <Button label="Play alert clip" kind="secondary" onPress={run('audio', playAlertClipDiagnostic)} />
         <Button label="Check headphones" kind="secondary" onPress={run('headphones', async () => `connected=${headphonesConnected()} outputs=[${currentAudioOutputs().join(', ')}]`)} />
         <Text style={[styles.body, { marginTop: 12 }]}>{out}</Text>
         <Card>

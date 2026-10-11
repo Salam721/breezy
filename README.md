@@ -33,6 +33,48 @@ Weather ─┘                                                                  
 
 Specs: `.claude/specs/breezy/` (requirements, design, tasks, platform research). Working rules: `CLAUDE.md`. Libraries and AI tools used: `DISCLOSURES.md`.
 
+## Tech stack
+
+**Languages**
+- TypeScript — the mobile app
+- Python 3 — the data pipeline (runs on the AWS Lambda Python runtime)
+- Swift — our own local iOS module for headphone detection (`app/modules/headphones`)
+
+**Mobile app (React Native + Expo, TypeScript)**
+- React Native 0.86 / React 19 — cross-platform UI
+- Expo SDK 57 as an **Expo development build** (not Expo Go; background location is unsupported in Expo Go)
+  - `expo-location` + `expo-task-manager` — background location and on-device plume checks
+  - `expo-notifications` — lock-screen alerts
+  - `expo-audio` — bundled voice warning, plays without a network call
+  - `expo-dev-client`, `expo-status-bar`
+- `@react-native-async-storage/async-storage` — on-device storage (no cloud account)
+
+**Data pipeline (Python)**
+- Shapely — downwind plume polygon geometry
+- `urllib` (standard library) — HTTP calls to the data APIs
+- boto3 — publishing the plume JSON to Amazon S3
+
+**Cloud services**
+- AWS Lambda — runs the pipeline on a schedule
+- Amazon S3 — hosts the single published plume file (`plumes.json`), overwritten each cycle
+
+**Data storage**
+- Amazon S3 — one JSON object (the plume file), not a database
+- AsyncStorage — on-device key-value storage; no server-side database, and coordinates never leave the phone
+
+**External APIs**
+- OpenAQ v3 — air-quality sensor readings (PM2.5)
+- OpenWeatherMap — wind speed and direction
+- ElevenLabs — used once to generate the bundled voice warning (not called at runtime)
+
+**Tooling and testing**
+- Jest + jest-expo — app unit tests
+- pytest — pipeline unit tests
+- TypeScript compiler (`tsc`) — type checking
+- ESLint, Prettier — linting and formatting
+
+See `DISCLOSURES.md` for the full list of third-party libraries, APIs, AI tools, and their licenses/terms.
+
 ## Project layout
 ```
 breezy/
